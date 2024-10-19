@@ -1,0 +1,206 @@
+<html>
+    <head>
+        <title>
+            Simple calculator
+        </title>
+        <style>
+            #neelam{
+    background-color:gray;
+    width: 250px;
+    height: fit-content;
+    color: white;
+    text-align: right;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+body{
+    background-color: white;
+}
+table{
+   text-align: center;
+   padding: 4px;
+   background-color: black;
+   margin: auto;
+   border-radius: 5px;   
+}
+input{
+    background-color: #808080;
+    width: 45px;
+    border-radius: 4px;
+    color: white;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+
+}
+input:hover{
+    background-color: white;
+    color: black;
+    transition: 0.9s;
+    border: none;
+    box-shadow: 0 6px rgba(0,0,0,0,2);
+}
+input:active{
+    box-shadow:white;
+    opacity: 0.4;
+    background-color: white;
+    box-shadow: 5 10px rgba(0,0,0,0,2);
+    transition: 0.4s;
+}
+#clear{
+    text-align: center;
+    
+    
+}
+#clear:hover{
+    
+    background-color: #ff0000;
+
+}
+#clear:active{
+    background-color: #ff0000;
+}
+#display{
+    width: 265px;
+    max-width: 300;
+    font-size: 36px;
+    text-align: right;
+     
+    
+}
+#display:hover{
+    width: 270px;
+    font-size:26px;
+    background-color: white;
+}
+#display:active{
+    background-color: white;
+
+}
+form input.isequals{
+    background-color:gray;
+    width: 100px;
+    box-shadow: 5 10px rgba(0,0,0,0,2);
+
+}
+form input.isequals:hover{
+    color:gray;
+    box-shadow: 5 10px rgba(0,0,0,0,2);
+
+}
+
+        </style>
+    </head>
+
+    <body>
+        <center>
+        <h4>SIMPLE CALCULATOR</h4>
+        </center>
+            <form class="calc" id="form-control">
+                <table border="9">
+                    <tr>
+                        <th  colspan="4">
+                            <input type="text" name="display" id="neelam"
+                            value="" readonly>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="1"
+                            onclick="display.value+='1'">
+                        </td>
+                        <td>
+                            <input type="button" value="2"
+                            onclick="display.value+='2'">
+                        </td>
+                        <td>
+                            <input type="button" value="3"
+                            onclick="display.value+='3'">
+                        </td>
+                        <td>
+                            <input type="button" value="+" class="operator" name="plus"
+                            onclick="display.value+='+'">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="4"
+                            onclick="display.value+='4'">
+
+                        </td>
+                        <td>
+                            <input type="button" value="5"
+                            onclick="display.value+='5'">
+                        </td>
+                        <td>
+                            <input type="button" value="6"
+                            onclick="display.value+='6'">
+                        </td>
+                        <td>
+                            <input type="button" value="-" class="operator" name="minus"
+                            onclick="display.value+='-'">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="7"
+                            onclick="display.value+='7'">
+                        </td>
+                        <td>
+                            <input type="button" value="8"
+                            onclick="display.value+='8'">
+                        </td>
+                        <td>
+                            <input type="button" value="9"
+                            onclick="display.value+='9'">
+                        </td>
+                        <td>
+                            <input type="button" value="*" class="operator" name="multiply"
+                            onclick="display.value+='*'">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="0"
+                            onclick="display.value+='0'">
+                        </td>
+                        <td>
+                            <input type="button" value="00"  
+                            onclick="display.value+='00'">
+                        </td>
+                        <td>
+                            <input type="button" value="." 
+                            onclick="display.value+='.'">
+                        </td>
+                        <td>
+                            <input type="button" value="/" name="divide" operator="divide"
+
+                            onclick="display.value+='/'">
+                        </td>
+                    </tr>
+                    <tr>
+                        
+                        <td>
+                            <input type="button" value="de"
+                            onclick="display.value=display.value.toString().slice(0,-1)">
+                        </td>
+                        <td>
+                            <input type="button" value="Ac"
+                            onclick="display.value=''">
+                        </td>
+                        <td colspan="2">
+                            <input type="button" value="=" class="isequals"
+                             id="isequals"
+                            onclick="display.value=eval(display.value)">
+                        </td>
+                    </tr>
+                </table>
+
+                </form>
+            </div>
+        </body>
+
+
+</html>
+
